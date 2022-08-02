@@ -1,13 +1,192 @@
-body {
+/* navbar */
+/*
+=============== 
+Fonts
+===============
+=============== 
+Variables
+===============
+*/
+
+:root {
+  --black-choise:#cfe80df0;
+  --white-choise:#f7fff7;
+ --fisrt-color:#14213d;
+ --choise-color:#ffffff;
+  --primary-color:#264653;
+  --secondary-color:#03045e;
+  --third-color:#d62828;
+  --fourth-color:#1b4332;
+  --fifty-color:#dddf00;
+  --clr-black: #222;
+  --ff-primary:  'Montserrat', sans-serif;;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-primary);
+  background:var(--choise-color);
+  color: var(--choise-color);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+
+/* section */
+.section {
+  padding: 5rem 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
 }
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+/* navbar */
+.navbar{
+  background: var(--clr-black);
+  box-shadow: var(--light-shadow);
+}
+.nav-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  color: var(--black-choise);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+
+.btn-toggle{
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 1.5rem;
+  color: var(--black-choise);
+}
+.container-links{
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.links{
+  margin-left: 2rem;
+}
+.links a{
+  color: var(--white-choise);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+.links a:hover{
+  color: #eaab0b;
+}
+
+@media (min-width:800px) {
+  .nav-center{
+   max-width: var(--max-width);
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   padding: 1rem;
+  }
+  .nav-header{
+    padding: 0;
+  }
+  .btn-toggle{
+    display: none;
+  }
+  .container-links{
+    height:  auto !important;
+  }
+  .links{
+    display: flex;
+  }
+  
+}
+
+
+
+
